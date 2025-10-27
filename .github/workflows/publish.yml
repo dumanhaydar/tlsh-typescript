@@ -43,6 +43,14 @@ jobs:
       - name: Test
         run: pnpm test
 
+      - name: Publish Test Report
+        uses: dorny/test-reporter@v2
+        if: always()
+        with:
+          name: Vitest Report
+          path: junit-report.xml
+          reporter: java-junit
+
   publish:
     name: Publish to npm
     if: github.event_name == 'release' && github.event.action == 'created'
