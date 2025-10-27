@@ -1,0 +1,52 @@
+{
+  "name": "tlsh-typescript",
+  "version": "1.0.0",
+  "description": "A browser-friendly TypeScript implementation of the TLSH (Trend Locality Sensitive Hash) algorithm.",
+  "author": "Duman Haydar <haydar@duman.io>",
+  "license": "(Apache-2.0 OR BSD-3-Clause)",
+  "keywords": [
+    "tlsh",
+    "hash",
+    "fuzzy hash",
+    "locality sensitive hash",
+    "security",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dumanhaydar/tlsh-typescript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dumanhaydar/tlsh-typescript/issues"
+  },
+  "homepage": "https://github.com/dumanhaydar/tlsh-typescript#readme",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "browser": "./dist/index.global.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm,iife --dts --clean --global-name TLSH",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.3"
+  }
+}
