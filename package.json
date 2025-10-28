@@ -1,6 +1,6 @@
 {
   "name": "tlsh-typescript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A browser-friendly TypeScript implementation of the TLSH (Trend Locality Sensitive Hash) algorithm.",
   "author": "Duman Haydar <haydar@duman.io>",
   "license": "(Apache-2.0 OR BSD-3-Clause)",
